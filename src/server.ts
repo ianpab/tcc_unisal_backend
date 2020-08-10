@@ -11,4 +11,4 @@ app.use(express.json());  // para express entender json
 app.use(routes);
 
 
-app.listen(process.env.APP_PORT);   
+app.listen(process.env.PORT || 3333);   
