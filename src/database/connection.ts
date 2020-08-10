@@ -7,7 +7,8 @@ const connection = knex({
         host : process.env.APP_HOST,
         user : process.env.APP_USER,
         password : process.env.APP_PASSWORD,
-    filename: path.resolve(__dirname,  'src', 'database','pgdatabase'),
+    filename: process.env.DATABASE_NAME,
+    
 
     },
     useNullAsDefault: true,

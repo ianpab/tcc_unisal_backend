@@ -2,12 +2,7 @@ import path from 'path';
 
 module.exports = {
     client: 'pg',
-    connection: {
-            host : process.env.APP_HOST,
-            user : process.env.APP_USER,
-            password : process.env.APP_PASSWORD,
-        filename: path.resolve(__dirname,  'src', 'database','pgdatabase'),
-    },
+    connection: process.env.DATABASE_URL,
     migrations:{
         directory: path.resolve(__dirname, 'src', 'database', 'migrations')
     },  

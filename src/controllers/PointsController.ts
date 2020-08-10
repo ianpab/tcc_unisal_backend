@@ -1,6 +1,5 @@
 import { Response, Request} from 'express';
 import knex from '../database/connection';
-import { number } from '@hapi/joi';
 
 class PointController{
 
