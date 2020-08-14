@@ -41,6 +41,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var connection_1 = __importDefault(require("../../dist/database/connection"));
 require("../../dist/server");
+var path_1 = __importDefault(require("path"));
 var ItemsController = /** @class */ (function () {
     function ItemsController() {
     }
@@ -56,7 +57,7 @@ var ItemsController = /** @class */ (function () {
                             return {
                                 id: item.id,
                                 title: item.title,
-                                image_url: process.env.APP_URL + item.image,
+                                image_url: path_1.default.resolve(__dirname, 'uploads', item.image),
                             };
                         });
                         return [2 /*return*/, response.json(serializedItems)];
