@@ -56,7 +56,7 @@ var ItemsController = /** @class */ (function () {
                             return {
                                 id: item.id,
                                 title: item.title,
-                                image_url: "../../../uploads"+ item.image,
+                                image_url: process.env.APP_URL + item.image,
                             };
                         });
                         return [2 /*return*/, response.json(serializedItems)];
