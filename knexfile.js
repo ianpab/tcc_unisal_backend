@@ -6,7 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var path_1 = __importDefault(require("path"));
 module.exports = {
     client: 'pg',
-    connection: process.env.DATABASE_URL,
+    connection: {
+        host: process.env.APP_HOST,
+        user: process.env.APP_USER,
+        password: process.env.APP_PASSWORD,
+        filename: process.env.DATABASE_NAME,
+    },
     migrations: {
         directory: path_1.default.resolve(__dirname, 'src', 'database', 'migrations')
     },
