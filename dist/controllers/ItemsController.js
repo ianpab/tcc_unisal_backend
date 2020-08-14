@@ -41,7 +41,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var connection_1 = __importDefault(require("../../dist/database/connection"));
 require("../../dist/server");
-require("../../dist/uploads");
 
 var ItemsController = /** @class */ (function () {
     function ItemsController() {
