@@ -4,8 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
-var PointsController_1 = __importDefault(require("./controllers/PointsController"));
-var ItemsController_1 = __importDefault(require("./controllers/ItemsController"));
+var PointsController_1 = __importDefault(require("../dist/controllers/PointsController"));
+var ItemsController_1 = __importDefault(require("../dist/controllers/ItemsController"));
 var routes = express_1.default.Router();
 var pointsController = new PointsController_1.default();
 var itemsController = new ItemsController_1.default();
